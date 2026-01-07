@@ -1,0 +1,14 @@
+:root {
+  /* main colors */
+  --main-color: yellow;
+  --secodary-color: red;
+
+  /* static */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
