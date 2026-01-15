@@ -25,12 +25,11 @@ body {
 .site-header {
   background: var(--main-color1);
   border-bottom: 1px solid var(--main-color2);
+  width: 100%;
 }
 
 .header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 16px;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,6 +91,15 @@ footer .upper {
   flex-direction: row;
   gap: 90px;
 }
+
+/* make a media query for tablets decrease the gap */
+
+@media (max-width: 768px) {
+  footer .upper {
+    gap: 50px;
+  }
+}
+
 footer .upper .part1 {
   position: relative;
   left: -60px;
@@ -106,8 +114,8 @@ footer .upper .part1 p {
 }
 footer .upper .part2 ul,
 footer .upper .part3 p {
-  position: relative;
-  left: 15px;
+  /* position: relative;
+  left: 15px; */
   line-height: var(--main-lineHight);
 }
 footer .upper .part2 ul li {
@@ -167,11 +175,11 @@ footer .lower .icons i:hover {
   margin-bottom: 100px;
 }
 .log-in form {
-  padding: 20px 30px;
+  padding: 10px 20px;
   background-color: var(--main-color3);
   border-radius: 20px;
   color: white;
-  width: 35%;
+  /* width: 35%; */
   /* opacity: 0.7; */
   display: flex;
   justify-content: space-between;
@@ -197,7 +205,9 @@ footer .lower .icons i:hover {
   /* font-weight: 600; */
 }
 .log-in form .sum-button:hover {
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
+  cursor: pointer;
+  opacity: 0.5;
 }
 .log-in form input:focus {
   text-transform: none;
@@ -221,3 +231,185 @@ footer .lower .icons i:hover {
     height: 36px;
   }
 } */
+
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 0;
+  height: 100vh;
+}
+
+.hero .vector {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* for tablet make the flex column  */
+@media (max-width: 768px) {
+  .hero {
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    height: auto;
+    gap: 40px;
+  }
+
+  .hero .vector {
+    top: 200px;
+  }
+}
+
+.hero .vector .photo-1 {
+  object-fit: contain;
+  width: 120px;
+}
+.hero .vector .plan {
+  top: 3px;
+  position: absolute;
+  width: 45px;
+}
+
+.hero .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hero .inner h1 {
+  font-size: 80px;
+  color: var(--main-color3);
+}
+.hero .inner p {
+  width: 60%;
+  color: var(--main-color3);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-image .images-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-image img {
+  width: 200px;
+}
+
+.hero-image img.large {
+  aspect-ratio: 1 / 2;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.hero-image section {
+  padding: 50px 0;
+}
+
+
+/* slider */
+
+
+.slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #888;
+  opacity: 1;
+}
