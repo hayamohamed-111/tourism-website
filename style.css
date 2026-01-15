@@ -1,39 +1,43 @@
 :root {
   /* main colors */
-  --main-color: yellow;
-  --secodary-color: red;
+  --main-color1: #f1f9fd;
+  --main-color2: #215e61;
+  --main-color3: #233d4d;
+  --main-color4: #1b2932;
 
   /* static */
+  --main-lineHight: 1.35;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-transform: capitalize;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
-  color: #222;
+  /* height: 100%; */
+  /* color: #222; */
 }
 
 .site-header {
-  background: #ffffffcc;
-  border-bottom: 1px solid #eee;
+  background: var(--main-color1);
+  border-bottom: 1px solid var(--main-color2);
 }
 
 .header-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 12px 16px;
+  padding: 20px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
 
-.logo {
+/* .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -44,11 +48,12 @@ body {
   height: 44px;
   width: auto;
   margin-right: 8px;
-}
+} */
 
-.brand {
-  font-weight: 700;
-  font-size: 1.1rem;
+.website-name {
+  font-weight: 600;
+  color: var(--main-color2);
+  font-size: 20px;
 }
 
 .site-nav ul {
@@ -60,16 +65,152 @@ body {
 
 .site-nav a {
   text-decoration: none;
-  color: #333;
+  color: var(--main-color2);
   padding: 6px 8px;
-  border-radius: 4px;
+  transition: all linear 0.2s;
 }
 
 .site-nav a:hover {
-  background: #f0f0f0;
+  color: var(--main-color3);
+  font-size: large;
+  text-shadow: #ddd 1px 1px 2px;
+  font-weight: 500;
 }
 
-@media (max-width: 640px) {
+footer {
+  background-color: var(--main-color4);
+  color: var(--main-color1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 80px 30px 80px;
+  position: relative;
+}
+footer .upper {
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+}
+footer .upper .part1 {
+  position: relative;
+  left: -60px;
+  top: 40px;
+}
+footer .upper .part1 h2 {
+  font-size: 35px;
+}
+footer .upper .part1 p {
+  position: relative;
+  left: 35px;
+}
+footer .upper .part2 ul,
+footer .upper .part3 p {
+  position: relative;
+  left: 15px;
+  line-height: var(--main-lineHight);
+}
+footer .upper .part2 ul li {
+  list-style: none;
+}
+footer .upper .part2 ul li a {
+  text-decoration: none;
+  color: var(--main-color1);
+}
+footer .upper .part4 {
+  position: relative;
+  left: 100px;
+  /* bottom: -112px; */
+  bottom: -138px;
+}
+footer .upper .part2 h4,
+footer .upper .part3 h4 {
+  border-bottom: var(--main-color2) solid 3px;
+  width: fit-content;
+  margin-bottom: 8px;
+}
+.breaker {
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--main-color1);
+  margin: 0px;
+}
+footer .lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .lower .icons {
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+}
+footer .lower .icons i {
+  border: var(--main-color1) solid 1px;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: var(--main-color1);
+  transition: all linear 0.2s;
+}
+footer .lower .icons i:hover {
+  box-shadow: inset #999 0px 0px 8px;
+}
+
+.log-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.log-in form {
+  padding: 20px 30px;
+  background-color: var(--main-color3);
+  border-radius: 20px;
+  color: white;
+  width: 35%;
+  /* opacity: 0.7; */
+  display: flex;
+  justify-content: space-between;
+}
+.log-in form input {
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.log-in form input::placeholder {
+  color: white;
+  font-style: italic;
+}
+.log-in form .sum-button {
+  padding: 12px;
+  background-color: var(--main-color4);
+  /* opacity: 0.4; */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  /* font-weight: 600; */
+}
+.log-in form .sum-button:hover {
+  transform: scale(0.9);
+}
+.log-in form input:focus {
+  text-transform: none;
+}
+.log-in i {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+.log-in i span {
+  border-bottom: #215e61 solid 2px;
+}
+
+/* @media (max-width: 640px) {
   .header-inner {
     padding: 10px;
   }
@@ -79,4 +220,4 @@ body {
   .logo img {
     height: 36px;
   }
-}
+} */
