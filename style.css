@@ -22,13 +22,19 @@ body {
   /* color: #222; */
 }
 
+.container {
+  margin: auto;
+  width: 80%;
+}
+
 .site-header {
   background: var(--main-color1);
   border-bottom: 1px solid var(--main-color2);
   width: 100%;
+  /* position: fixed; */
+  z-index: 80;
 }
-
-.header-inner {
+.site-header .header-inner {
   padding: 20px 0;
   display: flex;
   align-items: center;
@@ -49,27 +55,24 @@ body {
   margin-right: 8px;
 } */
 
-.website-name {
+.site-header .header-inner .website-name {
   font-weight: 600;
   color: var(--main-color2);
   font-size: 20px;
 }
-
-.site-nav ul {
+.site-header .header-inner .site-nav ul {
   list-style: none;
   display: flex;
   gap: 18px;
   align-items: center;
 }
-
-.site-nav a {
+.site-header .header-inner .site-nav a {
   text-decoration: none;
   color: var(--main-color2);
   padding: 6px 8px;
   transition: all linear 0.2s;
 }
-
-.site-nav a:hover {
+.site-header .header-inner .site-nav a:hover {
   color: var(--main-color3);
   font-size: large;
   text-shadow: #ddd 1px 1px 2px;
@@ -91,15 +94,6 @@ footer .upper {
   flex-direction: row;
   gap: 90px;
 }
-
-/* make a media query for tablets decrease the gap */
-
-@media (max-width: 768px) {
-  footer .upper {
-    gap: 50px;
-  }
-}
-
 footer .upper .part1 {
   position: relative;
   left: -60px;
@@ -124,6 +118,10 @@ footer .upper .part2 ul li {
 footer .upper .part2 ul li a {
   text-decoration: none;
   color: var(--main-color1);
+}
+footer .upper .part2 ul li a:hover {
+  font-size: large;
+  font-weight: 500;
 }
 footer .upper .part4 {
   position: relative;
@@ -172,7 +170,7 @@ footer .lower .icons i:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin: 100px;
 }
 .log-in form {
   padding: 10px 20px;
@@ -232,11 +230,6 @@ footer .lower .icons i:hover {
   }
 } */
 
-.container {
-  margin: auto;
-  width: 80%;
-}
-
 .hero {
   position: relative;
   display: flex;
@@ -246,73 +239,54 @@ footer .lower .icons i:hover {
   padding: 10px 0;
   height: 100vh;
 }
-
 .hero .vector {
   position: absolute;
   top: 10px;
   right: 15px;
 }
-
-/* for tablet make the flex column  */
-@media (max-width: 768px) {
-  .hero {
-    position: relative;
-    flex-direction: column;
-    align-items: start;
-    height: auto;
-    gap: 40px;
-  }
-
-  .hero .vector {
-    top: 200px;
-  }
-}
-
 .hero .vector .photo-1 {
   object-fit: contain;
-  width: 120px;
+  width: 110px;
 }
 .hero .vector .plan {
-  top: 3px;
+  top: 5px;
   position: absolute;
-  width: 45px;
+  width: 30px;
 }
-
 .hero .inner {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-
 .hero .inner h1 {
-  font-size: 80px;
+  font-size: 90px;
   color: var(--main-color3);
+}
+.hero .inner h1 span {
+  border-bottom: var(--main-color2) solid 5px;
 }
 .hero .inner p {
   width: 60%;
   color: var(--main-color3);
 }
-
 .hero-image {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-
 .hero-image .images-inner {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .hero-image img {
-  width: 200px;
+  width: 180px;
+  border-radius: 15px;
 }
-
 .hero-image img.large {
   aspect-ratio: 1 / 2;
-  width: 250px;
+  width: 230px;
   object-fit: cover;
   border-radius: 30px;
 }
@@ -320,48 +294,36 @@ footer .lower .icons i:hover {
   padding: 50px 0;
 }
 
-
-/* slider */
-
-
+/* Slider */
 .slider {
-  max-width: 100rem;
-  height: 50rem;
+  max-width: 80rem;
+  height: 40rem;
   margin: 0 auto;
   position: relative;
-
-  /* IN THE END */
   overflow: hidden;
 }
-
 .slide {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 50rem;
-
+  top: 150px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* THIS creates the animation! */
   transition: transform 1s;
 }
-
 .slide > img {
   /* Only for images that have different size than slide */
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
 }
-
 .slider__btn {
   position: absolute;
   top: 50%;
   z-index: 10;
-
   border: none;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--main-color1);
   font-family: inherit;
   color: #333;
   border-radius: 50%;
@@ -370,16 +332,15 @@ footer .lower .icons i:hover {
   font-size: 3.25rem;
   cursor: pointer;
 }
-
 .slider__btn--left {
   left: 6%;
   transform: translate(-50%, -50%);
 }
-
 .slider__btn--right {
   right: 6%;
   transform: translate(50%, -50%);
 }
+
 
 .dots {
   position: absolute;
@@ -388,7 +349,6 @@ footer .lower .icons i:hover {
   transform: translateX(-50%);
   display: flex;
 }
-
 .dots__dot {
   border: none;
   background-color: #b9b9b9;
@@ -403,13 +363,35 @@ footer .lower .icons i:hover {
   /* Only necessary when overlying images */
   /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
 }
-
 .dots__dot:last-child {
   margin: 0;
 }
-
 .dots__dot--active {
   /* background-color: #fff; */
   background-color: #888;
   opacity: 1;
+}
+
+/* All the media works is down there :- */
+
+/* Make a media query for tablets, decrease the gap in the footer */
+@media (max-width: 768px) {
+  footer .upper {
+    gap: 50px;
+  }
+}
+
+/* for tablet make the flex column  */
+@media (max-width: 768px) {
+  .hero {
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    height: auto;
+    gap: 40px;
+  }
+
+  .hero .vector {
+    top: 80px;
+  }
 }
