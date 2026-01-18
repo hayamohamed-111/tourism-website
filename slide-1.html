@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>try 1</title>
+    <link rel="icon" href="imgs/plan.png" type="image/png" />
+    <title>The Great Egyption Pyramids - slide 1</title>
     <style>
       * {
         box-sizing: border-box;
@@ -20,25 +21,27 @@
         /* opacity: 0.8; */
       }
       .hero {
-          width: 100%;
+        width: 100%;
         height: 100%;
-        background-image: url("imgs/grand\ egyption\ museum.jpeg");
-        background-size: cover;
         background-repeat: no-repeat;
+        /* background-image: url("imgs/the-pyramids.jpg"); */
+        background-image: linear-gradient(#ffffff33, #ffffff33), url("imgs/the-pyramids.jpg");
+        background-size: cover;
+
       }
       .info {
         display: flex;
         flex-direction: column;
         padding: 0 60px;
-        color: #552513;
+        color: black;
         line-height: 1.4;
       }
       .info h1 {
         text-align: center;
         margin: 30px;
-        color: #552513;
+        /* color: white; */
         font-size: 35px;
-        border-bottom: solid 3px #763c16d7;
+        border-bottom: solid 3px black;
         font-style: italic;
         width: fit-content;
         display: inherit;
@@ -50,23 +53,6 @@
       .info h3 span {
         font-style: italic;
         font-weight: 850;
-      }
-      .info form {
-        background-color: #763c165c;
-        padding: 15px;
-        width: fit-content;
-        border-radius: 25px;
-        color: white;
-        align-self: center;
-        margin: 30px;
-        border: solid 1px #552513;
-      }
-      .info form input {
-        color: white;
-        background-color: #763c16a3;
-        padding: 10px;
-        border-radius: 15px;
-        border: none;
       }
 
       @media (max-width: 600px) {
@@ -87,52 +73,30 @@
           height: 150%;
         }
       }
-      @media (min-width: 601px) {
-        .hero {
-          height: 200%;
-        }
-      }
-      @media (max-width: 798px) {
+      @media (min-width: 601px) and (max-width: 798px) {
         .hero {
           height: 200%;
         }
       }
     </style>
   </head>
+  
   <body>
     <div class="hero">
-    <div class="info">
-      <h1>grand egyptian museum</h1>
-      <p>
-        The Grand Egyptian Museum (GEM) is one of the largest and most
-        important archaeological museums in the world. Located near the Giza
-        Pyramids, it is designed to showcase Egypt’s rich ancient history in a
-        modern and innovative way. The museum brings together thousands of
-        artifacts that tell the story of Egyptian civilization, from
-        prehistoric times through the Greco-Roman period, offering visitors a
-        unique cultural and educational experience.
-      </p>
-      <h3>the creation of the <span>grand egyptian museum(GEM)</span></h3>
-      <p>
-        Inside the Grand Egyptian Museum, the places are organized to guide
-        visitors through Egypt’s history in a clear and detailed way. The
-        Grand Hall welcomes visitors with the massive statue of King Ramses
-        II, leading to the Grand Staircase, which displays large statues,
-        sarcophagi, and architectural pieces arranged by theme and era. The
-        Main Galleries consist of multiple halls that present artifacts
-        chronologically, covering prehistoric Egypt, the Old, Middle, and New
-        Kingdoms, and the Greco-Roman period. One of the most important areas
-        is the Tutankhamun Galleries, which display the complete collection of
-        treasures from his tomb for the first time in one place. The museum
-        also includes the Khufu Solar Boat Museum, conservation and
-        restoration laboratories, a Children’s Museum, temporary exhibition
-        halls, and visitor facilities such as restaurants, shops, and cultural
-        spaces.
-      </p>
-      <form action="https://visit-gem.com/ar/home" target="_blank">
-        <label for="trans">wanna book a ticket?!</label>
-        <input type="submit" id="trans" value="click here to book" />
-      </form>
- </div>   </div>
+      <div class="info">
+        <h1>the great egyptian pyramids</h1>
+        <p>
+          When the pyramids were recognized as one of the Seven Wonders of the Ancient World, it confirmed their extraordinary value and lasting impact on human history. The Great Pyramid of Giza is the only wonder that still stands today, making it a powerful symbol of endurance and achievement. For Egypt, the pyramids represent more than ancient tombs—they are a source of national pride and cultural identity. They also play a major role in tourism, attracting millions of visitors who come to witness their scale and beauty. Beyond their economic importance, the pyramids tell the story of a civilization that believed in eternity, teamwork, and the power of human imagination.
+        </p>
+        <h3>the discovery of the Sphinx</h3>
+        <p>
+          Inside the pyramids, archaeologists uncovered a complex and carefully planned world that reveals how advanced ancient Egyptian civilization was. Narrow corridors, hidden shafts, and grand chambers were designed not only to protect the pharaoh’s body but also to guide his soul into the afterlife. In the burial chambers, researchers found stone sarcophagi, fragments of mummies, and remains of valuable items such as jewelry, pottery, furniture, and ceremonial tools. The walls were often covered with hieroglyphic texts, including prayers, spells, and religious writings meant to ensure protection and eternal life for the ruler. Even though many treasures were stolen by grave robbers long ago, the discoveries inside the pyramids still tell a powerful story about Egyptian beliefs, craftsmanship, and their strong faith in life after death.
+        </p>
+        <h3>the discoveries inside the pyramids</h3>
+        <p>
+            The discovery of the Great Sphinx was surrounded by mystery and wonder, as it had been buried under layers of desert sand for hundreds of years. Early explorers and archaeologists slowly cleared away the sand, revealing the massive statue with the body of a lion and the head of a human, believed to represent a pharaoh. Standing near the pyramids, the Sphinx appeared like a silent guardian watching over the ancient tombs. Its size, design, and expression fascinated the world and raised many questions about its purpose and meaning. The discovery of the Sphinx highlighted the creativity and symbolic thinking of the ancient Egyptians and added even more mystery to the history of the Giza Plateau.
+        </p>
+      </div>   
+    </div>
   </body>
 </html>
