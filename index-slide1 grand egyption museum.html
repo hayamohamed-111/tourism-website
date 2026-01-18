@@ -16,16 +16,15 @@
         display: flex;
         flex-direction: column;
         height: 100vh;
+      
+        /* opacity: 0.8; */
       }
       .hero {
-        width: 100%;
+          width: 100%;
         height: 100%;
         background-image: url("imgs/grand\ egyption\ museum.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-        /* opacity: 0.8; */
       }
       .info {
         display: flex;
@@ -58,8 +57,6 @@
         width: fit-content;
         border-radius: 25px;
         color: white;
-        /* display: flex; */
-        /* justify-self: center; */
         align-self: center;
         margin: 30px;
         border: solid 1px #552513;
@@ -71,43 +68,71 @@
         border-radius: 15px;
         border: none;
       }
+
+      @media (max-width: 600px) {
+        .info {
+          line-height: 1;
+        }
+        .info h1 {
+          font-size: 25px;
+        }
+        .info p {
+          font-size: 14px;
+        /* }
+        .info h3,
+        .info h3 span {
+          font */
+        } 
+        .hero {
+          height: 150%;
+        }
+      }
+      @media (min-width: 601px) {
+        .hero {
+          height: 200%;
+        }
+      }
+      @media (max-width: 798px) {
+        .hero {
+          height: 200%;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="hero">
-      <div class="info">
-        <h1>grand egyptian museum</h1>
-        <p>
-          The Grand Egyptian Museum (GEM) is one of the largest and most
-          important archaeological museums in the world. Located near the Giza
-          Pyramids, it is designed to showcase Egypt’s rich ancient history in a
-          modern and innovative way. The museum brings together thousands of
-          artifacts that tell the story of Egyptian civilization, from
-          prehistoric times through the Greco-Roman period, offering visitors a
-          unique cultural and educational experience.
-        </p>
-        <h3>the creation of the <span>grand egyptian museum(GEM)</span></h3>
-        <p>
-          Inside the Grand Egyptian Museum, the places are organized to guide
-          visitors through Egypt’s history in a clear and detailed way. The
-          Grand Hall welcomes visitors with the massive statue of King Ramses
-          II, leading to the Grand Staircase, which displays large statues,
-          sarcophagi, and architectural pieces arranged by theme and era. The
-          Main Galleries consist of multiple halls that present artifacts
-          chronologically, covering prehistoric Egypt, the Old, Middle, and New
-          Kingdoms, and the Greco-Roman period. One of the most important areas
-          is the Tutankhamun Galleries, which display the complete collection of
-          treasures from his tomb for the first time in one place. The museum
-          also includes the Khufu Solar Boat Museum, conservation and
-          restoration laboratories, a Children’s Museum, temporary exhibition
-          halls, and visitor facilities such as restaurants, shops, and cultural
-          spaces.
-        </p>
-        <form action="https://visit-gem.com/ar/home" target="_blank">
-          <label for="trans">wanna book a ticket?!</label>
-          <input type="submit" id="trans" value="click here to book" />
-        </form>
-      </div>
-    </div>
+    <div class="info">
+      <h1>grand egyptian museum</h1>
+      <p>
+        The Grand Egyptian Museum (GEM) is one of the largest and most
+        important archaeological museums in the world. Located near the Giza
+        Pyramids, it is designed to showcase Egypt’s rich ancient history in a
+        modern and innovative way. The museum brings together thousands of
+        artifacts that tell the story of Egyptian civilization, from
+        prehistoric times through the Greco-Roman period, offering visitors a
+        unique cultural and educational experience.
+      </p>
+      <h3>the creation of the <span>grand egyptian museum(GEM)</span></h3>
+      <p>
+        Inside the Grand Egyptian Museum, the places are organized to guide
+        visitors through Egypt’s history in a clear and detailed way. The
+        Grand Hall welcomes visitors with the massive statue of King Ramses
+        II, leading to the Grand Staircase, which displays large statues,
+        sarcophagi, and architectural pieces arranged by theme and era. The
+        Main Galleries consist of multiple halls that present artifacts
+        chronologically, covering prehistoric Egypt, the Old, Middle, and New
+        Kingdoms, and the Greco-Roman period. One of the most important areas
+        is the Tutankhamun Galleries, which display the complete collection of
+        treasures from his tomb for the first time in one place. The museum
+        also includes the Khufu Solar Boat Museum, conservation and
+        restoration laboratories, a Children’s Museum, temporary exhibition
+        halls, and visitor facilities such as restaurants, shops, and cultural
+        spaces.
+      </p>
+      <form action="https://visit-gem.com/ar/home" target="_blank">
+        <label for="trans">wanna book a ticket?!</label>
+        <input type="submit" id="trans" value="click here to book" />
+      </form>
+ </div>   </div>
   </body>
 </html>
