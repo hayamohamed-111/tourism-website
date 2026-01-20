@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   text-transform: capitalize;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -104,7 +105,7 @@ footer .upper .part1 h2 {
 }
 footer .upper .part1 p {
   position: relative;
-  left: 35px;
+  left: 0px;
 }
 footer .upper .part2 ul,
 footer .upper .part3 p {
@@ -400,7 +401,7 @@ footer .lower .icons i:hover {
 
 .dots {
   position: absolute;
-  bottom: 5%;
+  bottom: 0%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -682,7 +683,7 @@ footer .lower .icons i:hover {
   }
 
   .dots {
-    bottom: 3%;
+    bottom: 0%;
   }
 
   .dots__dot {
@@ -737,6 +738,85 @@ footer .lower .icons i:hover {
   footer .lower .icons i {
     width: 35px;
     height: 35px;
+  }
+}
+
+/* Tablet responsive - max-width: 826px */
+@media (max-width: 800px) {
+  footer {
+    padding: 25px 30px;
+  }
+
+  footer .upper {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .upper .part1 {
+    left: 0;
+    top: 0;
+  }
+
+  footer .upper .part1 h2 {
+    font-size: 26px;
+  }
+
+  footer .upper .part1 p {
+    left: 0;
+    text-align: center;
+  }
+
+  footer .upper .part2,
+  footer .upper .part3 {
+    text-align: center;
+  }
+
+  footer .upper .part2 h4,
+  footer .upper .part3 h4 {
+    margin: 0 auto 8px;
+  }
+
+  footer .upper .part2 ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  footer .upper .part3 p {
+    line-height: 1.6;
+  }
+
+  footer .upper .part4 {
+    left: 0;
+    bottom: 0;
+    position: static;
+  }
+
+  footer .lower {
+    gap: 10px;
+  }
+
+  footer .lower .icons {
+    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  footer .lower .icons i {
+    width: 36px;
+    height: 36px;
+    padding: 9px;
+  }
+
+  footer .lower p {
+    font-size: 13px;
+    text-align: center;
   }
 }
 
