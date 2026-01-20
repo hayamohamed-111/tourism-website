@@ -742,7 +742,7 @@ footer .lower .icons i:hover {
 }
 
 /* Tablet responsive - max-width: 826px */
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   footer {
     padding: 25px 30px;
   }
